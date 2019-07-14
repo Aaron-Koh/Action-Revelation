@@ -42,8 +42,8 @@ class MCG(object):
         if game == 'specfixed':
             # Payoff matrices are fixed over time, and specified by the user, only one
             self.n_acts = n_acts
-            self.rew_mats_a = [np.array([[5., 1.], [6., 4.]])]
-            self.rew_mats_b = [np.array([[5., 6.], [1., 4.]])]
+            self.rew_mats_a = [np.array([[500., 1.], [501., 4.]])]
+            self.rew_mats_b = [np.array([[500., 501.], [1., 4.]])]
             self.random = False
         elif game == 'setfixed':
             # Payoff matrices are fixed over time, and specified by the user, sampled from a fixed set

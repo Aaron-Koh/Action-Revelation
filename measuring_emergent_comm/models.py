@@ -68,7 +68,7 @@ class ReinforceCommAgent(nn.Module):
     action of the opponent.
     """
     def __init__(self, gamma=0.9, n_inp=16, n_hid=20, n_out=2, n_comm=2, ent_coeff=1e-2, c_coeff=1e-1, val_coeff=1e-1,
-                 n_steps=None, mask_c_learning=False, separate_comm_network=False): # todo modify n_inp
+                 n_steps=None, mask_c_learning=False, separate_comm_network=False):
         """Sets variables, and creates layers for networks
 
         Args:
@@ -103,15 +103,15 @@ class ReinforceCommAgent(nn.Module):
             self.h2_c = nn.Linear(n_hid, n_hid)
 
         # Hidden layers for action prediction networks
-        self.h1_apred_sep = nn.Linear(n_inp, n_hid)
-        self.h2_apred_sep = nn.Linear(n_hid, n_hid)
-        self.h1_apred_nocommsep = nn.Linear(n_inp, n_hid)
-        self.h2_apred_nocommsep = nn.Linear(n_hid, n_hid)
-        self.out_apred = nn.Linear(n_hid, n_out)
-        self.out_apred_nocomm = nn.Linear(n_hid, n_out)
-        self.apred_noinps = nn.Parameter(torch.zeros(n_out))
-        self.out_apred_sep = nn.Linear(n_hid, n_out)
-        self.out_apred_nocommsep = nn.Linear(n_hid, n_out)
+        self.h1_apred_sep = nn.Linear(n_inp, n_hid)           # sep
+        self.h2_apred_sep = nn.Linear(n_hid, n_hid)           # sep
+        self.h1_apred_nocommsep = nn.Linear(n_inp, n_hid)     # nocommsep
+        self.h2_apred_nocommsep = nn.Linear(n_hid, n_hid)     # nocommsep
+        self.out_apred = nn.Linear(n_hid, n_out)              # inps
+        self.out_apred_nocomm = nn.Linear(n_hid, n_out)       # nocomm
+        self.apred_noinps = nn.Parameter(torch.zeros(n_out))  # noinps
+        self.out_apred_sep = nn.Linear(n_hid, n_out)          # sep
+        self.out_apred_nocommsep = nn.Linear(n_hid, n_out)    # nocommsep
 
         # Other properties and coefficients
         self.gamma = gamma
@@ -190,7 +190,7 @@ class ReinforceCommAgent(nn.Module):
 
     def act(self, x, mode='', apred=""):
         # Returns a discrete sample from the main network
-        # If apred is not an empty string, then output is the prediction of the opponent's actoin
+        # If apred is not an empty string, then output is the prediction of the opponent's action
         # If mode == 'comm', then output is a message
         # If mode == 'act', then output is an action
 

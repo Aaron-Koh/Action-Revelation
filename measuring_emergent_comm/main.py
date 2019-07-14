@@ -145,7 +145,7 @@ def train(args):
     last_time = time.time()
 
     # Main training loop
-    # todo tensorboard
+    # todo add tensorboard
     n_batch = 0
     writer = SummaryWriter(comment='Agent')
     for i in range(args.num_episodes):
@@ -154,7 +154,7 @@ def train(args):
         with torch.no_grad():
             if args.comm_type == "turns" or args.comm_type == "garble":
                 # Agents take turns communicating
-                # todo annotation
+                # todo annotate
                 # j = np.random.randint(2)  # randomize which agent goes first
                 # c1 = agent[j].act(torch.Tensor(ob_c[j]), mode='comm')
                 # ob_c2 = env.step_c_single(c1, j, garble=args.comm_type == "garble")
@@ -163,14 +163,14 @@ def train(args):
                 # # fix agent obs/ comms lists for correct updating
                 # c = [c1*(1-j) + c2*j, c1*j + c2*(1-j)]
                 # ob_c = [ob_c[0]*(1-j) + ob_c2[0]*j, ob_c[1]*j + ob_c2[1]*(1-j)]
-                # todo insert new code block
 
+                # todo add the process of agent acting in the environment with the mechanism of action revelation
                 c1 = agent[0].act(torch.Tensor(ob_c[0]), mode='comm')
                 c2 = agent[1].act(torch.Tensor(ob_c[1]), mode='comm')
 
                 # 1. 决定哪一方做 action revelation
                 if c1 == 1 and c2 == 1:
-                    # 1.1 如果双方都决定 commit action e.g. c1 = c2 = 1，则随机选择一方。选中方执行动作。更新环境信息。未选中方执行动作
+                    # 1.1 如果双方都决定 commit action e.g. c1 = c2 = 1，则随机选择一方。选中方先执行动作
                     j = np.random.randint(2)
                     if j == 0:
                         c2 = 0
@@ -208,8 +208,6 @@ def train(args):
 
                 a = [a1, a2]
                 c = [c1, c2]
-
-
             elif args.comm_type == "oneag" or args.comm_type == "none":
                 # Only one agent communicates, or neither does
                 c1 = agent[0].act(torch.Tensor(ob_c[0]), mode='comm')
@@ -229,8 +227,9 @@ def train(args):
                 c = [np.random.randint(args.n_comm), np.random.randint(args.n_comm)]
                 ob_a = env.step_c(*c)
 
+            # todo annotate
             # Produce action
-            # a = [ag.act(torch.Tensor(o), mode='act') for o, ag in zip(ob_a, agent)] # todo annotation
+            # a = [ag.act(torch.Tensor(o), mode='act') for o, ag in zip(ob_a, agent)]
 
             # Predict the action of the opponent
             apred = [ag.act(torch.Tensor(o), mode='act', apred="inps") for o, ag in zip(ob_a, agent)]
@@ -241,8 +240,8 @@ def train(args):
 
             # Take actions, update observations and observe reward
             ob_c_new, rew = env.step_a(*a, new_mats=True)
-            # writer.add_scalar('Agent0/reward', rew[0], i)
-            # writer.add_scalar('Agent1/reward', rew[1], i)
+            writer.add_scalar('Agent0/reward', rew[0], i)
+            writer.add_scalar('Agent1/reward', rew[1], i)
 
         # Keep track of actions, observations for each agent
         for j in range(2):
@@ -260,20 +259,19 @@ def train(args):
         ob_c = ob_c_new
 
         # Every batch_size iterations, perform an update
-
         if len(acts[0]) == args.batch_size:
             n_batch += 1
             for j in range(2):
                 # Update agent policy
-                # todo tensorboard loss
+                # todo add tensorboard loss
                 if j == 0:
                     loss0 = agent[j].update(comms[j], acts[j],  rews[j], obs_a[j], optimizer[j], obs_c=obs_c[j])
                     writer.add_scalar('Agent0/loss', loss0, n_batch)
-                    writer.add_scalar('Agent0/reward', np.mean(rews[j]), n_batch)
+                    # writer.add_scalar('Agent0/reward', np.mean(rews[j]), n_batch)
                 else:
                     loss1 = agent[j].update(comms[j], acts[j],  rews[j], obs_a[j], optimizer[j], obs_c=obs_c[j])
                     writer.add_scalar('Agent1/loss', loss1, n_batch)
-                    writer.add_scalar('Agent1/reward', np.mean(rews[j]), n_batch)
+                    # writer.add_scalar('Agent1/reward', np.mean(rews[j]), n_batch)
 
                 # Update action prediction policies
                 agent[j].update_apred(obs_a[j], acts[1 - j], optimizer_apred[j])
@@ -287,7 +285,7 @@ def train(args):
                 stats[j] = U.calc_stats(comms[j], acts[j], args.n_comm, args.n_acts, stats[j])
                 sc[j].append(eval.calc_mutinfo(acts[j], comms[j], args.n_acts, args.n_comm))
                 ic[j].append(eval.calc_mutinfo(acts[1 - j], comms[j], args.n_acts, args.n_comm))
-                # todo tensorboard reward
+                # todo add tensorboard
                 if j == 0:
                     writer.add_scalar('Agent0/sc', eval.calc_mutinfo(acts[j], comms[j], args.n_acts, args.n_comm), n_batch)
                     writer.add_scalar('Agent0/ic', eval.calc_mutinfo(acts[1 - j], comms[j], args.n_acts, args.n_comm), n_batch)
@@ -319,7 +317,7 @@ def train(args):
 
         # Display values and append them to counters
         if (i + 1) % args.print_freq == 0:
-            print_string = f'Iteration {i},\t\n ' \
+            print_string = f'Iteration {i + 1},\t\n ' \
                            f'Ag1 SC: {np.mean(sc[0]):.{4}},\t Ag2 SC: {np.mean(sc[1]):.{4}}\n' \
                            f'Ag1 Reward: {np.mean(avg_rews[0]):.{4}},\t Ag2 Reward: {np.mean(avg_rews[1]):.{4}}\n'
             if args.verbose:
@@ -390,7 +388,7 @@ def train(args):
         if (i + 2) % args.save_freq == 0 or (args.log_saving and any([(i + 2) == k for k in logsave_list])):
             U.save_model(args, agent, i+2)
 
-    # todo tensorboard
+    # todo add tensorboard
     writer.close()
 
 

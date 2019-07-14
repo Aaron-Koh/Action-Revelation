@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40db1208-91f7-4fb8-bc36-37aab4939cd6" name="Default Changelist" comment="" />
+    <list default="true" id="40db1208-91f7-4fb8-bc36-37aab4939cd6" name="Default Changelist" comment="Modify some annotations.">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measuring_emergent_comm/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/measuring_emergent_comm/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measuring_emergent_comm/mcg.py" beforeDir="false" afterPath="$PROJECT_DIR$/measuring_emergent_comm/mcg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measuring_emergent_comm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/measuring_emergent_comm/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measuring_emergent_comm/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/measuring_emergent_comm/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measuring_emergent_comm/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/measuring_emergent_comm/utils.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +20,7 @@
     <SUITE FILE_PATH="coverage/measuring_emergent_comm_master$test.coverage" NAME="test Coverage Results" MODIFIED="1563037213907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/measuring_emergent_comm" />
     <SUITE FILE_PATH="coverage/measuring_emergent_comm$main.coverage" NAME="main Coverage Results" MODIFIED="1563095026869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/measuring_emergent_comm" />
     <SUITE FILE_PATH="coverage/measuring_emergent_comm_master$main.coverage" NAME="main Coverage Results" MODIFIED="1561769195035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/measuring_emergent_comm" />
+    <SUITE FILE_PATH="coverage/measuring_emergent_comm$test.coverage" NAME="test Coverage Results" MODIFIED="1563111597484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/measuring_emergent_comm" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -23,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="-45">
+              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
               <folding>
                 <element signature="e#349#939#0" />
                 <element signature="e#979#1119#0" />
@@ -44,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -54,16 +63,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/mcg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#792#4270#0" />
+                <element signature="e#6423#6660#0" />
+                <element signature="e#6723#7358#0" />
+                <element signature="e#7419#8113#0" />
+                <element signature="e#8206#8487#0" />
+                <element signature="e#8524#8751#0" />
+                <element signature="e#8789#9017#0" />
+                <element signature="e#9048#9421#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
+            <state relative-caret-position="109">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
               <folding>
-                <element signature="e#244#256#0" expanded="true" />
                 <element signature="e#617#830#0" />
                 <element signature="e#866#930#0" />
                 <element signature="e#974#1173#0" />
-                <element signature="e#1233#1800#0" />
                 <element signature="e#2392#4661#0" />
                 <element signature="e#4729#7388#0" />
                 <element signature="e#7439#8062#0" />
@@ -74,23 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/mcg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding>
-                <element signature="e#4314#6367#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+            <state relative-caret-position="99">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding>
+                <element signature="e#8612#11908#0" />
+                <element signature="e#11999#12454#0" />
+                <element signature="e#12515#12677#0" />
+                <element signature="e#12739#12902#0" />
+                <element signature="e#13980#14394#0" />
+                <element signature="e#18535#21578#0" />
+                <element signature="e#21691#22956#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,24 +147,35 @@
       <find>act-re</find>
       <find>act_re</find>
       <find>step_a_single</find>
+      <find>ag</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Aaron &lt;937019757@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/measuring_emergent_comm/models.py" />
-        <option value="$PROJECT_DIR$/measuring_emergent_comm/test.py" />
         <option value="$PROJECT_DIR$/measuring_emergent_comm/mcg.py" />
+        <option value="$PROJECT_DIR$/measuring_emergent_comm/test.py" />
+        <option value="$PROJECT_DIR$/measuring_emergent_comm/models.py" />
         <option value="$PROJECT_DIR$/measuring_emergent_comm/main.py" />
+        <option value="$PROJECT_DIR$/measuring_emergent_comm/utils.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1944" />
     <option name="height" value="1044" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -169,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="measuring-emergent-comm-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,8 +277,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.models" />
       </list>
     </recent_temporary>
@@ -264,12 +298,13 @@
       <workItem from="1562401547153" duration="5687000" />
       <workItem from="1562956772099" duration="1676000" />
       <workItem from="1563027665564" duration="11770000" />
-      <workItem from="1563094798370" duration="243000" />
+      <workItem from="1563094798370" duration="1906000" />
+      <workItem from="1563108606199" duration="15396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35248000" />
+    <option name="totallyTimeSpent" value="52307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,17 +319,18 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15602264" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17784964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3285968" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2606383" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25932506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3280142" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3295964" />
@@ -309,6 +345,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Modify some annotations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify some annotations." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py" />
@@ -333,13 +384,30 @@
         <state relative-caret-position="-1200" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/eval.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://D:/Anaconda3/Lib/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="e#2560#3025#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="-45">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
           <folding>
             <element signature="e#349#939#0" />
             <element signature="e#979#1119#0" />
@@ -355,26 +423,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/test.py">
+    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/eval.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/mcg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="109">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#792#4270#0" />
+            <element signature="e#6423#6660#0" />
+            <element signature="e#6723#7358#0" />
+            <element signature="e#7419#8113#0" />
+            <element signature="e#8206#8487#0" />
+            <element signature="e#8524#8751#0" />
+            <element signature="e#8789#9017#0" />
+            <element signature="e#9048#9421#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
+        <state relative-caret-position="109">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding>
-            <element signature="e#244#256#0" expanded="true" />
             <element signature="e#617#830#0" />
             <element signature="e#866#930#0" />
             <element signature="e#974#1173#0" />
-            <element signature="e#1233#1800#0" />
             <element signature="e#2392#4661#0" />
             <element signature="e#4729#7388#0" />
             <element signature="e#7439#8062#0" />
@@ -384,20 +460,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/mcg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#4314#6367#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/measuring_emergent_comm/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+        <state relative-caret-position="99">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="e#8612#11908#0" />
+            <element signature="e#11999#12454#0" />
+            <element signature="e#12515#12677#0" />
+            <element signature="e#12739#12902#0" />
+            <element signature="e#13980#14394#0" />
+            <element signature="e#18535#21578#0" />
+            <element signature="e#21691#22956#0" />
+          </folding>
         </state>
       </provider>
     </entry>

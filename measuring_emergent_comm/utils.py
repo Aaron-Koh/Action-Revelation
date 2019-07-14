@@ -51,7 +51,7 @@ def to_int(n):
     else:
         return int(n.data.numpy())
 
-
+# never
 def probs_from_counts(l, ldim, eps=0):
     # Outputs a probability distribution (list) of length ldim, by counting event occurrences in l
     l_c = [eps] * ldim
@@ -99,7 +99,7 @@ def get_named_params(agent, s):
             p.append(param)
     return p
 
-
+# never
 def get_all_but_named_params(agent, s):
     # Returns all parameters for a given agent that *do not* contain the substring s
     p = []
